@@ -1,0 +1,69 @@
+@import '../constants.css';
+
+
+.root-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.logo-container {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+}
+
+.root-layout header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3rem;
+    gap: 1rem;
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.root-layout header h1 {
+    margin: 0;
+    padding: 1.5rem 0;
+    font-size: 3rem;
+    color: var(--text-color);
+}
+
+.root-layout header .logo {
+    height: 56px;
+    width: auto;
+}
+
+.root-layout nav {
+    padding: 0 1.5rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    order: 2;
+    width: 100%;
+    margin-left: 0;
+}
+
+.root-layout nav a {
+    display: inline-block;
+    padding: 2rem 1.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.root-layout nav a.active {
+    background-color: var(--accent-color);
+}
+
+.root-layout nav a:hover {
+    background-color: var(--accent-color);
+}
+
+.root-layout main {
+    background-color: var(--secondary-color);
+    flex-grow: 1;
+}
