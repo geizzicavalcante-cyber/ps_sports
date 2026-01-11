@@ -1,8 +1,9 @@
 import React from 'react'
+import TabelaGestao from '../components/TabelaGestao/TabelaGestao';
 
 function Gestao() {
   return (
-    <div>Gestao</div>
+    <TabelaGestao />
   )
 }
 
