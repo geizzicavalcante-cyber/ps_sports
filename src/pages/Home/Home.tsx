@@ -1,10 +1,21 @@
-import React from 'react'
 import LoginForm from '../../components/LoginForm/LoginForm'
+import RegisterForm from '../../components/RegisterForm/RegisterForm'
+import { useState } from 'react'
+import './Home.css'
 
 function Home() {
 
+  const [isLogin, setIsLogin] = useState(true)
+
   return (
-    <LoginForm />
+    <div>
+      {isLogin ? <LoginForm/> : <RegisterForm/>}
+      <div className='switchContainer'>
+        <button className="switch" onClick={() => setIsLogin(!isLogin)}>
+          {isLogin ? 'Ir para Cadastro' : 'Ir para Login'}
+        </button>
+      </div>
+    </div>
   )
 }
 

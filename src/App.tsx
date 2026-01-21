@@ -10,6 +10,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import { DarkTheme } from './themes';
 import Box from '@mui/material/Box';
 
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
@@ -22,13 +23,16 @@ const router = createBrowserRouter(
 );
 
 function App() {
+
+
   return (
-    <ThemeProvider theme={DarkTheme}>
-      <Box width="100vw" height="100vh" bgcolor={DarkTheme.palette.background.default}>
-        <RouterProvider router={router} />
-      </Box>
-    </ThemeProvider>
+      <ThemeProvider theme={DarkTheme}>
+        <Box width="100vw" height="100vh" bgcolor={DarkTheme.palette.background.default}>
+          <RouterProvider router={router} />
+        </Box>
+      </ThemeProvider>
   );
 }
 
 export default App;
+
